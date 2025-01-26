@@ -1,31 +1,105 @@
-import React from 'react'
-import GridImage from '../components/GridImage'
-import ColorWriteUp from '../components/ColorWriteUp'
-import Link from 'next/link'
+import React from 'react';
 
-const page = () => {
+const OurWork = () => {
   return (
-    <div>
-        <div className="pt-16"></div>
-        <div className="grid grid-cols-2 md:grid-cols-4">
-            <ColorWriteUp heading='Innovative Solutions' text='We bring fresh, creative ideas tailored to your unique business needs.' color='bg-[#8db48e]' />
-            <ColorWriteUp heading='Experienced Advisors' text='Our team of seasoned professionals offers valuable insights and expertise.' color='' />
-            <GridImage heading='Cybersecurity Firm' link='' pic="/cybersecurity.jpg" text='Proposal Response Format Development and Website Revamp'/>
-            <ColorWriteUp heading='Client-Centric Approach' text='We prioritize your goals and work collaboratively to bring your vision to life.' color='' />
-            
-            <ColorWriteUp heading='Proven Results' text='Our strategies have a track record of driving success and growth for our clients.' color='bg-[#8db48e]' />
-            <GridImage heading='Technology Procurement' link='' pic="/technology.jpg" text='Comprehensive Business Development and Marketing Initiatives'/>
-            <ColorWriteUp heading='Personalized Approach' text='Tailored services to meet your unique needs and ideas, ensuring a customized experience.' color='' />
-            <GridImage heading='Soccer Coaching Academy Development' link='' pic="/soccer.jpg" text='Ongoing work in establishing a soccer coaching academy focused on training future coaches'/>
+    <div className="w-full bg-gray-100">
+      {/* Header Section */}
+      <div className="py-16 text-center bg-green-600 text-white">
+        <h1 className="text-5xl font-extrabold mt-10">OUR WORK</h1>
+        <p className="mt-4 text-xl">See how we help businesses grow with innovative strategies and creative solutions.</p>
+      </div>
 
-            <GridImage heading='Gift and décor business' link='' pic="/gift.jpg" text='Product Advisory and Sales Platform Development'/>
-            <ColorWriteUp heading='Actionable Results' text='Tangible outcomes that move your ideas from conception to implementation.' color='' />
-            <GridImage heading='Basketball training business ' link='' pic="/basketball.jpg" text='Comprehensive Growth Strategy'/>
-            <Link href={'/about'}><ColorWriteUp heading='' text='Ready to take your business to the next level? Contact The Gud Aidia Company today and discover how we can help you innovate, grow, and succeed.' color='' /></Link>
+      {/* Our Work Showcase */}
+      <div className="container mx-auto py-16 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          {/* Project 1 */}
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+            <a href="https://www.affinity-it.com/">
+            <img
+              src="./affinity.jpg"
+              alt="Project 1"
+              className="w-full h-56 object-cover"
+            />
+            </a>
+            
+            <div className="p-6">
+              <h3 className="text-2xl font-semibold text-purple-600">ICT Resource Biz:</h3>
+              <p className="mt-2 text-gray-600"><b> </b>We remodeled and redesigned the ICT Resource Biz website, enhancing its visual appeal and functionality. The site now features a modern design, an improved campaign layout, a complete ICT services revamp, and SEO optimization for better visibility and performance..</p>
+            </div>
+          </div>
+
+          {/* Project 2 */}
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+            <a href="https://https://ictresources.biz.com">
+            <img
+              src="/ict.jpg"
+              alt="Project 2"
+              className="w-full h-56 object-cover"
+ />
+            </a>
+            
+            <div className="p-6">
+              <h3 className="text-2xl font-semibold text-purple-600">Affinity IT:</h3>
+              <p className="mt-2 text-gray-600"> For Affinity IT, we delivered a full website revamp, with a fresh design focused on cybersecurity services. We also updated their campaign features and implemented a comprehensive SEO strategy to ensure optimal reach and search engine performance.</p>
+            </div>
+          </div>
+
+          {/* Project 3 */}
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+            <a href="https://campaign.gudaidia.com/">
+            <img
+              src="./cam.jpg"
+              alt="Project 3"
+              className="w-full h-56 object-cover"
+            />
+            </a>
+          
+            <div className="p-6">
+              <h3 className="text-2xl font-semibold text-purple-600">Gud Aidia Campaign:</h3>
+              <p className="mt-2 text-gray-600"> We redesigned the Gud Aidia Campaign website, creating a visually engaging platform for the book club and campaign initiatives. The overhaul includes a streamlined design, updated ICT features, and SEO optimization to increase discoverability and engagement.</p>
+            </div>
+          </div>
 
         </div>
-    </div>
-  )
-}
+      </div>
 
-export default page
+      {/* Section - How We Help */}
+      <div className="bg-white py-16 px-4">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl font-extrabold text-green-600">How We Help Our Clients</h2>
+          <p className="mt-4 text-xl text-gray-600">We provide tailored strategies that align with your business goals to drive innovation, efficiency, and growth.</p>
+          
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div className="p-6 bg-purple-100 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-semibold text-green-600">Innovation Strategy</h3>
+              <p className="mt-2 text-gray-600">Our team works closely with you to develop forward-thinking strategies that foster creativity and innovation, driving business growth.</p>
+            </div>
+            <div className="p-6 bg-purple-100 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-semibold text-green-600">Growth Strategy</h3>
+              <p className="mt-2 text-gray-600">We help businesses scale by implementing effective growth strategies, focusing on operational efficiency, and market expansion.</p>
+            </div>
+            <div className="p-6 bg-purple-100 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-semibold text-green-600">Client-Centric Solutions</h3>
+              <p className="mt-2 text-gray-600">Our solutions are designed around your specific needs, ensuring that we deliver impactful and sustainable results for your business.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="bg-gray-600 py-16 text-center text-white">
+        <h2 className="text-4xl font-extrabold">Ready to Take Your Business to the Next Level?</h2>
+        <p className="mt-4 text-xl">Let's work together to create innovative strategies that will drive your business success.</p>
+        <a
+          href="#contact"
+          className="mt-8 inline-block bg-white text-purple-600 py-2 px-6 rounded-lg text-lg font-semibold hover:bg-purple-100 transition-all"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default OurWork;

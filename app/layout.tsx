@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import {Livvic} from "next/font/google";
+import {Poppins} from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-const livvic = Livvic({
+const livvic = Poppins({
   weight: ['100', '300', '400', '700'],
   subsets: ['latin'],
   style: ['normal', 'italic']

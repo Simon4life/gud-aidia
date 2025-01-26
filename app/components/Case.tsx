@@ -6,7 +6,7 @@ const Case = () => {
   return (
     <div>
         <div className="py-5 text-center">
-            <h1 className='text-gray-600'>SERVICES</h1>
+          <h1 className='text-purple-600 text-5xl font-extrabold'>SERVICES</h1>
         </div>
         <div className="grid md:grid-cols-4 ">
            <GridImage heading='Brand Renaissance' link='' pic="/homeservice1.jpg" text='Revitalizing and evolving brand identities to ensure relevance and impactful engagement with target audiences. SB'/>
