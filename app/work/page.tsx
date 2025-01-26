@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const OurWork = () => {
   return (
@@ -16,11 +17,13 @@ const OurWork = () => {
           {/* Project 1 */}
           <div className="bg-white shadow-lg rounded-lg overflow-hidden">
             <a href="https://www.affinity-it.com/">
-            <img
-              src="./affinity.jpg"
-              alt="Project 1"
-              className="w-full h-56 object-cover"
-            />
+              <Image
+                src="/affinity.jpg" // Replace with the correct path if necessary
+                alt="Project 1"
+                width={800} // Add width
+                height={400} // Add height
+                className="w-full h-56 object-cover"
+              />
             </a>
             
             <div className="p-6">
@@ -31,12 +34,14 @@ const OurWork = () => {
 
           {/* Project 2 */}
           <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-            <a href="https://https://ictresources.biz.com">
-            <img
-              src="/ict.jpg"
-              alt="Project 2"
-              className="w-full h-56 object-cover"
- />
+            <a href="https://ictresources.biz/">
+              <Image
+                src="/ict.jpg" // Replace with the correct path if necessary
+                alt="Project 2"
+                width={800} // Add width
+                height={400} // Add height
+                className="w-full h-56 object-cover"
+              />
             </a>
             
             <div className="p-6">
@@ -48,11 +53,13 @@ const OurWork = () => {
           {/* Project 3 */}
           <div className="bg-white shadow-lg rounded-lg overflow-hidden">
             <a href="https://campaign.gudaidia.com/">
-            <img
-              src="./cam.jpg"
-              alt="Project 3"
-              className="w-full h-56 object-cover"
-            />
+              <Image
+                src="/cam.jpg" // Replace with the correct path if necessary
+                alt="Project 3"
+                width={800} // Add width
+                height={400} // Add height
+                className="w-full h-56 object-cover"
+              />
             </a>
           
             <div className="p-6">
@@ -90,7 +97,7 @@ const OurWork = () => {
       {/* Call to Action */}
       <div className="bg-gray-600 py-16 text-center text-white">
         <h2 className="text-4xl font-extrabold">Ready to Take Your Business to the Next Level?</h2>
-        <p className="mt-4 text-xl">Let's work together to create innovative strategies that will drive your business success.</p>
+        <p className="mt-4 text-xl">Lets work together to create innovative strategies that will drive your business success.</p>
         <a
           href="#contact"
           className="mt-8 inline-block bg-white text-purple-600 py-2 px-6 rounded-lg text-lg font-semibold hover:bg-purple-100 transition-all"
