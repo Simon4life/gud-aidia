@@ -6,7 +6,7 @@ const Donate = () => {
   return (
     <div>
         <div className="py-5 text-center">
-            <h1 className='text-gray-600'>DONATE</h1>
+            <h1 className='text-purple-600 text-5xl font-extrabold'>DONATE</h1>
         </div>
         <div className="bg-[#4d724d] py-20 px-4 md:px-52 md:flex justify-center items-end text-white">
             <div className="md:w-1/2 md:pr-20">
