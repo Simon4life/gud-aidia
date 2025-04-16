@@ -6,8 +6,8 @@ const OurWork = () => {
     <div className="w-full bg-gray-100">
       {/* Header Section */}
       <div className="py-16 text-center bg-green-600 text-white">
-        <h1 className="text-5xl font-extrabold mt-10">OUR WORK</h1>
-        <p className="mt-4 text-xl">See how we help businesses grow with innovative strategies and creative solutions.</p>
+        <h1 className="text-5xl font-extrabold mt-10">How We Help</h1>
+        <p className="mt-4 text-xl">We don’t do guesswork. We craft strategies that drive real </p>
       </div>
 
       {/* Our Work Showcase */}
