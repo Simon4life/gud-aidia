@@ -9,7 +9,7 @@ const Services = () => {
   return (
         <div>
             <div className="py-5 text-center">
-            <h1 className='text-gray-600'>Services</h1>
+            <h1 className='text-purple-600 text-5xl font-extrabold'>Services</h1>
         </div>
         <Carousel showArrows={true} showThumbs={false} showIndicators={true} infiniteLoop={true} useKeyboardArrows={true} autoPlay={true} stopOnHover={true} swipeable={true} transitionTime={2000} interval={5000} animationHandler={'fade'} showStatus={false}>
         <div className="bg-[#4d724d] text-[#faf1cf] md:px-40 lg:px-60 items-center flex h-[70vh] text-left px-4 md:pt-0">
