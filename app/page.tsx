@@ -12,7 +12,7 @@ export default function Home() {
       <Services/>
       <About/>
       <Case/>
-      <Donate/>
+      {/* <Donate/> */}
     </main>
   );
 }
