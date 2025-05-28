@@ -1,34 +1,63 @@
-// import Image from 'next/image';
-// import Link from 'next/link';
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const About = () => {
   return (
-    <div className="w-full">
-        <div className="py-5 text-center">
-            <h1 className='text-purple-600 text-5xl font-extrabold'>OUR STORY</h1>
+    <section className="py-16 px-6 bg-gray-50">
+        <div className="section-header">
+        
+            <span></span>
+            <p>Our Values</p>
+            <h2 className="sm:text-2xl text-left md:text-3xl lg:text-4xl mb-8 leading-relaxed">
+            We are a team of strategic innovators who believe that every idea has a story.
+            At The Gʊd Aɪˈdiə Company, our mission is to bring that story to life through bold strategy, creative thinking, and purpose-driven growth.
+            </h2>
         </div>
-        <div className="bg-[#4d724d] py-20 px-4 px-20 md:flex justify-center items-start text-white w-full">
-            <div className="md:pr-20">
-                <p className="text-[20px] text-justify">The Gʊd Aɪ’diə Company is an innovation and growth strategy enabler based in New Jersey. We assist leading establishments through all stages of innovation and growth. Founded with a strategic mission, Our team comprises innovation specialists, strategists, analysts, technology experts, behavioral scientists, and coordinators who have earned a reputation for simplifying complexity over many years while offering clear, independent, and candid strategic solutions. Our expertise spans various sectors, including Consumer, Entertainment & Recreation, Technology, and Energy. Their mission is to drive business success through innovative strategies and creative solutions. Their vision is to be the top growth enablement firm offering innovative and growth strategies needed by businesses to achieve sustainable success. <br/> <br/> We operate under the <b>Principles of RISE:
-                </b>
-                <br />
-                <b> R</b>esilience:  Staying committed to clients success, overcoming challenges, and adapting to change with unwavering dedication.
-                <br />
-                <b>I</b>nnovation: Constantly seeking out and applying the most creative, forward-thinking solutions to drive business growth and transformation.
-                <br />
-                <b>S</b>ervice Excellence: Delivering outstanding results through exceptional service, ensuring that every client experience is positive and impactful.
-                <br />
-                <b>E</b>mpowerment: Equipping clients with the knowledge, tools, and confidence they need to succeed, making them active participants in their own transformation.
-                </p>
+            
+
+
+        <div className="flex gap-6 flex-col md:flex-row items-center">
+            <div>
+                    
+                <div className="mb-5">
+                    <h3 className='text-xl font-bold mb-3'>Based in New Jersey</h3>
+                    <p className='max-w-[700px] text-gray-500'>Based in London, our digital agency is dedicated to helping brands thrive in the digital world. We specialize in web design, digital marketing, SEO, content creation.</p>
+                </div>
+                <div className="mb-5">
+                    <h3 className='text-xl font-bold mb-3'>Our goal is clear</h3>
+                    <p className='max-w-[700px] text-gray-500'>At The Gʊd Aɪˈdiə Company, we simplify complexity and spark bold growth through strategic, innovative solutions.</p>
+                </div>
+
+                <Link href="/about" className="border-b font-semibold">Learn More</Link>
+
+                {/* stats */}
+
+                <div className="flex mt-8 ">
+                    <div className='pr-6'>
+                        <h1 className='text-5xl font-bold mb-4'>08+</h1>
+                        <p>Global Team members</p>
+                    </div>
+                    <div className='border-l px-8'>
+                        <h1 className='text-5xl font-bold mb-4'>10k</h1>
+                        <p>Global Team members</p>
+                    </div>
+                </div>
             </div>
-            {/* <div className="md:w-1/2 md:pl-20 pt-20 md:pt-0">
-                <Image src={'/logo.png'} alt='logo' width={387} height={357}/>
-                <p className="pt-10 pb-5"><Link href={''} className='hover:text-[#faf1cf] underline text-[22px]'>Donate a book</Link></p>
-                <Link href={''} className='hover:text-[#faf1cf] underline text-[22px]'>Donate an amount</Link>
-            </div> */}
+            <div className="w-full max-w-4xl mx-auto px-4">
+                    <div className="relative aspect-video overflow-hidden rounded-2xl">
+                        <img
+                        src="/worker.jpg"
+                        alt="Descriptive Alt Text"
+                        className="h-full w-full"
+                        />
+                    </div>
+            </div>
+
         </div>
-    </div>
+    
+
+    </section>
   )
 }
 
