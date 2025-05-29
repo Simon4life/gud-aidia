@@ -1,57 +1,91 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { CgClose, CgMenuCheese } from 'react-icons/cg'
 
 const Navbar = () => {
+  const [isActive, setIsActive] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
-  const [isActive, setIsActive] = useState(false);
+  const handleClick = () => setIsActive(!isActive)
 
-  const handleClick = () => {
-    setIsActive(!isActive)
-  }
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <div>
-      <div className='w-full bg-[#800080] fixed z-40'>
-        <div className="flex justify-center items-center text-white py-3">
-            <div className="flex justify-between items-center w-[80%] m-auto">
-                <Link href={'/'}><Image src={'/logo.png'} alt='logo' width={87} height={57}/></Link>
-                <ul className="md:flex font-[400] text-[19px] gap-10 items-center hidden">
-                    <Link href={'/'}><li className="hover:text-[#a5a5a5]">Home</li></Link>
-                    <Link href={'/work'}><li className="hover:text-[#a5a5a5]">Work</li></Link>
-                    <Link href={'/about'}><li className="hover:text-[#a5a5a5]">About Us</li></Link>
-                    <Link href={'/contact'}><li className="hover:text-[#a5a5a5]">Contact Us</li></Link>
-                    <Link href={''}> <li className='bg-[#faf1cf] py-2 px-4 text-gray-900 rounded-md hover:bg-[#a5a5a5]'>Gʊd Aɪ’diə Campaign</li> </Link>
-                </ul>
-                <CgMenuCheese className='text-[30px] md:hidden' onClick={handleClick}/>
-            </div>
-            
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+    scrolled ? 'bg-black shadow-lg' : 'bg-transparent'
+      }`}
+    >
+      <div className="flex justify-center items-center py-4">
+        <div className="flex justify-between items-center w-[90%] max-w-7xl mx-auto text-white">
+          {/* Logo */}
+          <Link href="/">
+            <Image src="/logo.png" alt="logo" width={87} height={57} />
+          </Link>
+
+          {/* Desktop Nav */}
+          <ul className="hidden md:flex items-center space-x-8 text-sm font-medium">
+            <li>
+              <Link href="/" className="hover:text-gray-300 transition">Home</Link>
+            </li>
+            <li>
+              <Link href="/work" className="hover:text-gray-300 transition">Work</Link>
+            </li>
+            <li>
+              <Link href="/about" className="hover:text-gray-300 transition">About Us</Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-gray-300 transition">Contact Us</Link>
+            </li>
+            <li>
+              <Link href="/campaign">
+                <span className="bg-white text-black px-4 py-2 rounded-md font-semibold hover:bg-gray-200 transition">
+                  Gʊd Aɪ’diə Campaign
+                </span>
+              </Link>
+            </li>
+          </ul>
+
+          {/* Mobile Icon */}
+          <button className="md:hidden text-2xl" onClick={handleClick}>
+            {isActive ? <CgClose /> : <CgMenuCheese />}
+          </button>
         </div>
-        
       </div>
-      <div className={isActive ? ' fixed w-full z-50' : 'hidden'}>
-            <div className="flex justify-center items-center text-white py-3 bg-[#3f6844]">
-              <div className="flex justify-between items-center w-[80%]">
-                <Link href={'/'}><Image src={'/logo.png'} alt='logo' width={87} height={57}/></Link>
-                <CgClose className='text-[30px] md:hidden text-right' onClick={handleClick}/>
-              </div>
-            </div>
-            <div className="flex justify-center items-center h-screen ">
-              
-              <div className="w-[20%] h-full" onClick={handleClick}></div>
-              <div className="w-[80%] py-5 px-10 bg-[#3f6844] text-white h-full">
-                <ul className="text-[25px] pt-20">
-                        <Link href={'/'}><li className="hover:text-[#a5a5a5] py-5">Home</li></Link>
-                        <Link href={'/work'}><li className="hover:text-[#a5a5a5] py-5">Work</li></Link>
-                        <Link href={'/about'}><li className="hover:text-[#a5a5a5] py-5">About Us</li></Link>
-                        <Link href={'/contact'}><li className="hover:text-[#a5a5a5] py-5">Contact Us</li></Link>
-                        <Link href={''}> <li className='bg-[#faf1cf] py-2 px-4 text-gray-900 rounded-md hover:bg-[#a5a5a5] mt-20'>Gʊd Aɪ’diə Campaign</li> </Link>
-                    </ul>
-              </div>
-            </div>
-      </div>
-    </div>
+
+      {/* Mobile Menu Overlay */}
+      {isActive && (
+        <div className="md:hidden relative top-0 left-0 w-full h-screen bg-black bg-opacity-95 text-white z-40">
+          <div className="flex justify-between items-center px-6 py-4 border-b border-white/10">
+            <Link href="/" onClick={handleClick}>
+              <Image src="/logo.png" alt="logo" width={87} height={57} />
+            </Link>
+            <button onClick={handleClick} className="text-2xl">
+              <CgClose />
+            </button>
+          </div>
+          <div className="flex flex-col space-y-6 p-8 text-lg font-medium">
+            <Link href="/" onClick={handleClick} className="hover:text-gray-400">Home</Link>
+            <Link href="/work" onClick={handleClick} className="hover:text-gray-400">Work</Link>
+            <Link href="/about" onClick={handleClick} className="hover:text-gray-400">About Us</Link>
+            <Link href="/contact" onClick={handleClick} className="hover:text-gray-400">Contact Us</Link>
+            <Link href="/campaign" onClick={handleClick}>
+              <span className="bg-white text-black px-4 py-2 rounded-md font-semibold hover:bg-gray-200 transition">
+                Gʊd Aɪ’diə Campaign
+              </span>
+            </Link>
+          </div>
+        </div>
+      )}
+    </nav>
   )
 }
 

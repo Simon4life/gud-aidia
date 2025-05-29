@@ -1,6 +1,7 @@
 "use client"
 import Link from 'next/link'
 import { useState } from 'react'
+import { MdArrowOutward } from 'react-icons/md'
 
 const items = [
   {
@@ -13,16 +14,16 @@ const items = [
   {
     id: '002',
     title: 'Social Media',
-    description: '',
+    description: 'Leverages platforms like Facebook, Instagram, LinkedIn to engage and attract.',
     image: 'Gud2.jpg',
-    tags: [],
+    tags: ['Services', 'E-Commerce', 'Corporate Website', 'HR Platform'],
   },
   {
     id: '003',
     title: 'Content Marketing',
-    description: '',
+    description: 'Leverages platforms like Facebook, Instagram, LinkedIn to engage and attract.',
     image: 'Gud3.jpg',
-    tags: [],
+    tags: ['Services', 'E-Commerce', 'Corporate Website', 'HR Platform'],
   }
 ]
 
@@ -34,15 +35,15 @@ export default function ServiceDropdown() {
   }
 
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="bg-white max-w-6xl mx-auto py-16 px-4">
       <div className="w-full mx-auto divide-y divide-gray-200">
         <div className="flex flex-col md:flex-row p-0 gap-6 mb-12 md:justify-between items-center">
-          <h1 className='text-4xl md:text-5xl max-w-[600px]'>Marketing Strategy solutions for you</h1>
+          <h1 className='text-5xl md:text-5xl max-w-[600px]'>Marketing Strategy solutions for you</h1>
           <div className="max-w-[400px]">
-            <p className='m-0'>
-              Several key factors, including market trends, the agency’s ability to  adapt
+            <p className='m-0 p-0 text-xl mb-6'>
+              Several key factors, including market trends, the agency's ability to  adapt
             </p>
-            <Link href="/">View all services</Link>
+            <Link href="/" className='px-2 py-4 text-xl flex items-center w-60 justify-center bg-purple-300 rounded text-center'>View all services <span className='ml-4'><MdArrowOutward/></span></Link>
           </div>
         </div>
             {items.map((item, index) => {
@@ -54,19 +55,19 @@ export default function ServiceDropdown() {
                           <span className={`text-sm px-3 py-1 rounded-full ${index === 0 ? 'bg-blue-100' : index === 1 ? 'bg-yellow-100' : 'bg-green-100'}`}>
                             {item.id}
                           </span>
-                          <h3 className="flex-1 ml-4 font-bold text-gray-800">{item.title}</h3>
-                          <span className="text-xl font-bold">{isOpen ? '−' : '+'}</span>
+                          <h3 className="flex-1 ml-6 md:ml-32 text-xl font-medium text-gray-800">{item.title}</h3>
+                          <span className="text-2xl">{isOpen ? '−' : '+'}</span>
                   </div>
                   {isOpen && (
-                    <div className="mt-4 flex flex-col md:flex-row md:items-start gap-6 px-2">
+                    <div className="mt-4 flex flex-col md:ml-4 md:flex-row md:items-start gap-6 px-2">
                       {/* Image */}
                       {item.image && (
-                        <img src={item.image} alt={item.title} className="w-32 h-32 object-cover rounded-lg" />
+                        <img src={item.image} alt={item.title} className="w-32 h-32 object-cover rounded" />
                       )}
 
                       {/* Text & Link */}
                       <div className="flex-1">
-                        <p className="text-sm text-gray-600 mb-3 max-w-[474px]">{item.description}</p>
+                        <p className=" text-gray-600 mb-3 max-w-[474px]">{item.description}</p>
                         <a href="#" className="text-sm font-medium text-gray-700 underline inline-flex items-center gap-1">
                           Learn more <span>↗</span>
                         </a>
@@ -74,7 +75,7 @@ export default function ServiceDropdown() {
                         {/* Tags */}
                         <div className="mt-4 flex flex-wrap gap-2">
                           {item.tags.map((tag, idx) => (
-                            <span key={idx} className="px-3 py-1 rounded-full bg-gray-100 text-sm text-gray-700">
+                            <span key={idx} className="px-3 py-1 rounded-full border-[2px] text-sm text-gray-700">
                               {tag}
                             </span>
                           ))}
