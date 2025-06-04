@@ -1,6 +1,6 @@
 import React from 'react'
 import Hero from '../components/Hero'
-
+import {FaTerminal, FaLightbulb} from "react-icons/fa"
 
 const teamMembers = [
   {
@@ -92,13 +92,43 @@ const page = () => {
         </div>
         
       </article>
-      
-      <div className='flex my-12 justify-between items-center'>
-        <h2 className="text-2xl font-semibold mb-6">Marketing for Lasting Impact</h2>
-        <p className="text-gray-700 max-w-xl text-right">
-          We understand your vision and bring a strategic approach to help you grow over time.
-        </p>
+      <div className="">
+        <div className='flex my-12 justify-between items-center'>
+          <h2 className="text-2xl font-semibold mb-6">Marketing for Lasting Impact</h2>
+          <p className="text-gray-700 max-w-xl text-right">
+            We understand your vision and bring a strategic approach to help you grow over time.
+          </p>
+        </div>
+        <div className="flex flex-col items-center md:flex-row gap-8">
+          <div className="w-full h-full max-w-3xl mx-auto flex-grow basis-0">
+              <div className="relative overflow-hidden">
+                <img
+                src="/Gud3.jpg"
+                alt="group of worker"
+                className="h-full"/>
+              </div>
+          </div>
+          <div className="grow-[2] basis-0 grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div className="pt-6 border-t-2 border-gray-300">
+              <h2 className='text-2xl mb-4'>Vision into reality</h2>
+              <p className=''>Whether you're a startup or a well-established enterprise, we offer flexible solutions that grow with you.</p>
+            </div>
+            <div className="pt-6 border-t-2 border-gray-300">
+              <h2 className='text-2xl mb-4'>Vision into reality</h2>
+              <p className=''>Whether you're a startup or a well-established enterprise, we offer flexible solutions that grow with you.</p>
+            </div>
+            <div className="pt-6 border-t-2 border-gray-300">
+              <h2 className='text-2xl mb-4'>Vision into reality</h2>
+              <p className=''>Whether you're a startup or a well-established enterprise, we offer flexible solutions that grow with you.</p>
+            </div>
+            <div className="pt-6 border-t-2 border-gray-300">
+              <h2 className='text-2xl mb-4'>Vision into reality</h2>
+              <p className=''>Whether you're a startup or a well-established enterprise, we offer flexible solutions that grow with you.</p>
+            </div>
+          </div>
+        </div>
       </div>
+      
       <section className="bg-white py-16">
         <h2 className="text-2xl font-semibold text-center mb-10">Meet Our Team</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-0">
@@ -118,19 +148,59 @@ const page = () => {
           ))}
         </div>
       </section>
+    </section>.
+      <div className="flex flex-col lg:flex-row max-w-6xl px-6 py-16 items-center justify-between gap-8 bg-gray-50 rounded-2xl">
+      {/* Left Text Section */}
+      <div className="lg:w-1/2 text-center lg:text-left">
+        <h2 className="text-3xl font-bold mb-4">Reason to choose us</h2>
+        <p className="text-gray-600 mb-8">
+          Benefits premium innovative solutions for brands to our subscribers.
+        </p>
 
-      <section className="bg-gray-100 py-16">
-        <h2 className="text-2xl font-semibold text-center mb-10">Reasons to Choose Us</h2>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-0">
-          {reasons.map((reason, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-lg font-semibold mb-2">{reason.title}</h3>
-              <p className="text-gray-600">{reason.description}</p>
+        {/* Reasons List */}
+        <div className="space-y-6">
+          <div className="flex items-start gap-4">
+            <FaTerminal className="text-purple-500 w-6 h-6" />
+            <div>
+              <h3 className="text-xl font-semibold">Tailored Strategies</h3>
+              <p className="text-gray-600">
+                Our team works closely with you to understand your unique business goals and create customized strategies that drive measurable results.
+              </p>
             </div>
-          ))}
+          </div>
+
+          <div className="flex items-start gap-4">
+            <FaLightbulb className="text-purple-500 w-6 h-6" />
+            <div>
+              <h3 className="text-xl font-semibold">Innovative Solutions</h3>
+              <p className="text-gray-600">
+                We stay ahead of the curve, using the latest technologies and industry trends to deliver cutting-edge solutions that keep your business competitive.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <FaTerminal className="text-purple-500 w-6 h-6" />
+            <div>
+              <h3 className="text-xl font-semibold">Scalable Solutions</h3>
+              <p className="text-gray-600">
+                Whether you're a startup or a well-established enterprise, we offer flexible solutions that grow with you to support your long-term goals.
+              </p>
+            </div>
+          </div>
         </div>
-      </section>
-    </section>
+      </div>
+
+      {/* Right Image Section */}
+      <div className="lg:w-1/2 flex justify-center">
+        <img
+          src="/path-to-your-image.jpg"
+          alt="Team working on a laptop"
+          className="rounded-2xl shadow-lg max-w-full"
+        />
+      </div>
+    </div>
+    
     </>
   )
 }
