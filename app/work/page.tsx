@@ -1,192 +1,104 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import { MdArrowUpward } from "react-icons/md";
+import Hero from "../components/Hero";
+import { StepCard } from "../components/WorkProcess";
+import { IoShieldCheckmarkOutline, IoBarChartOutline, IoTrophyOutline } from "react-icons/io5";
 
-const OurWork = () => {
+const projects = [
+    {
+      title: "Website Revamp - Cybersecurity Firm",
+      description:
+        "Enhanced the proposal response format and provided strategic direction for a website overhaul. Resulted in a more professional and engaging presentation and improved client acquisition.",
+        icon: <IoShieldCheckmarkOutline/>
+    },
+    {
+      title: " Business Development and Marketing Initiatives",
+      description:
+        "Compiled a targeted list of potential business partners and resellers, identifying key opportunities to expand the company’s network and drive growth.",
+        icon: <IoBarChartOutline/>
+    },
+    {
+      title: "Soccer Coaching Academy Development (Ongoing)",
+      description:
+        "Identified and documented essential requirements for establishing a soccer coaching academy, including facilities, staffing, and curriculum.",
+        icon: <IoTrophyOutline/>
+    }
+  ];
+  
+const services = [
+  {
+    title: "Brand Renaissance",
+    description: "Revitalizing and evolving brand identities to ensure relevance and impactful engagement with target audiences.",
+    color: "bg-purple-100",
+    icon: "🗨️"
+  },
+  {
+    title: "Business Strategy Alignment",
+    description: "Providing expert advice and insights to align business operations with market trends and future goals, driving strategic growth.",
+    color: "bg-neutral-50",
+    icon: "🔍"
+  },
+  {
+    title: "Digital Positioning and Transformation",
+    description: "Optimizing and leveraging digital strategies to achieve a specific market position or advantage (market differentiation)",
+    color: "bg-blue-100",
+    icon: "✉️"
+  },
+  {
+    title: "Excellence Optimization",
+    description: "Streamlining and enhancing business processes to achieve peak efficiency, cost reduction, and superior performance.",
+    color: "bg-yellow-100",
+    icon: "📣"
+  },
+  {
+    title: "Innovative Solutions Management",
+    description: "Guiding businesses through the complete innovation lifecycle, from conceptualization to implementation, to maintain a competitive edge.",
+    color: "bg-green-100",
+    icon: "🎯"
+  },
+  {
+    title: "Holistic Growth Design",
+    description: "Delivering comprehensive strategies for sustainable business growth that aligns with long-term objectives and vision.",
+    color: "bg-rose-100",
+    icon: "➡️"
+  }
+];
+
+export default function MarketingServicesGrid() {
   return (
-    <div className="w-full bg-gray-100">
-      {/* Header Section */}
-      <div className="py-16 text-center bg-green-600 text-white">
-        <h1 className="text-5xl font-extrabold mt-10">How We Help</h1>
-        <p className="mt-4 text-xl">We don’t do guesswork. We craft strategies that drive real </p>
-      </div>
-            {/* Section - How We Help */}
-            <div className="bg-white py-16 px-4">
-        <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-extrabold text-green-600">Why Work With Us?s</h2>
-          <p className="mt-4 text-xl text-gray-600">We provide tailored strategies that align with your business goals to drive innovation, efficiency, and growth.</p>
-          
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <div className="p-6 bg-purple-100 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold text-green-600">Innovation Strategy</h3>
-              <p className="mt-2 text-gray-600">We bring fresh, creative ideas tailored to your unique business needs.</p>
-            </div>
-            <div className="p-6 bg-purple-100 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold text-green-600">Growth Strategy</h3>
-              <p className="mt-2 text-gray-600">We bring fresh, creative ideas tailored to your unique business needs.</p>
-            </div>
-            <div className="p-6 bg-purple-100 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold text-green-600">Client-Centric Solutions</h3>
-              <p className="mt-2 text-gray-600">We prioritize your goals and work collaboratively to bring your vision to life.</p>
-            </div>
-            <div className="p-6 bg-purple-100 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold text-green-600">Proven Results</h3>
-              <p className="mt-2 text-gray-600">Our strategies have a track record of driving success and growth for our clients.</p>
-            </div>
-            <div className="p-6 bg-purple-100 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold text-green-600">Personalized Approach</h3>
-              <p className="mt-2 text-gray-600">Tailored services to meet your unique needs and ideas, ensuring a customized experience.</p>
-            </div>
-            <div className="p-6 bg-purple-100 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold text-green-600">Actionable Results</h3>
-              <p className="mt-2 text-gray-600">Tangible outcomes that move your ideas from conception to implementation.</p>
-            </div>
+    <>
+    <Hero header="Our Services" subheader="We offer a comprehensive suite of services designed to drive business success through innovative strategies and creative solutions." />
+    <section className="px-6 md:px-12 py-20 max-w-7xl mx-auto">
+      <h1 className="text-4xl font-bold mb-10 text-center text-gray-800">Our Marketing Services</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map(({ title, description, color, icon }) => (
+          <div
+            key={title}
+            className={`p-6 rounded-md border shadow-sm ${color}`}
+          >
+            <div className="text-3xl mb-4">{icon}</div>
+            <h2 className="text-xl font-semibold mt-16 text-gray-900 mb-2">{title}</h2>
+            <p className="text-gray-700 mb-4 text-sm text-justify leading-relaxed">{description}</p>
+            <button className="inline-flex items-center gap-1 text-sm font-medium text-gray-900 group-hover:underline">
+              Learn more <MdArrowUpward className="w-4 h-4" />
+            </button>
           </div>
+        ))}
+      </div>
+    </section>
+    <section className="px-6 md:px-12 py-20 max-w-7xl bg-gray-50 mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+            projects.map((project, index) => {
+                return (
+                    <StepCard key={index} title={project.title} icon={project.icon} description={project.description} />
+                )
+            })
+        }
         </div>
-      </div>
-
-      {/* Second Header */}
-      <div className='w-full bg-gray-100'>
-        <div className="py-16 text-center text-purple-600">
-          <h1 className="text-3xl font-extrabold mt-10">Work and accomplishments: </h1>
-          <p className="mt-4 text-xl">At The Gud Aidia Company, we leverage our expertise to deliver impactful solutions across various domains. Here’s a snapshot of our recent projects and achievements based on the specific need of business </p>
-        </div>
-      </div>
-
-      {/* Our Work Showcase */}
-      <div className="container mx-auto py-16 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
-          {/* Project 1 */}
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-            <a href="https://www.affinity-it.com/">
-              <Image
-                src="/affinity.jpg" // Replace with the correct path if necessary
-                alt="Project 1"
-                width={800} // Add width
-                height={400} // Add height
-                className="w-full h-56 object-cover"
-              />
-            </a>
-            
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold text-purple-600">Proposal Response Format Development and Website Revamp:</h3>
-              <p className="mt-2 text-gray-600"><b> </b>Cybersecurity Firm
-              Enhanced the proposal response format and provided strategic direction for a website overhaul, resulting in a more professional and engaging presentation and improved client acquisition
-              </p>
-            </div>
-          </div>
-
-                    {/* Project 3 */}
-                    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-            <a href="https://campaign.gudaidia.com/">
-              <Image
-                src="/cam.jpg" // Replace with the correct path if necessary
-                alt="Project 3"
-                width={800} // Add width
-                height={400} // Add height
-                className="w-full h-56 object-cover"
-              />
-            </a>
-          
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold text-purple-600">Comprehensive Growth Strategy:</h3>
-              <p className="mt-2 text-gray-600">Basketball training business </p>
-            </div>
-          </div>
-
-          {/* Project 4 */}
-                    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-            <a href="https://campaign.gudaidia.com/">
-              <Image
-                src="/cam.jpg" // Replace with the correct path if necessary
-                alt="Project 3"
-                width={800} // Add width
-                height={400} // Add height
-                className="w-full h-56 object-cover"
-              />
-            </a>
-          
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold text-purple-600">4.Product Advisory and Sales Platform Development:</h3>
-              <p className="mt-2 text-gray-600"><b>Gift and décor business
-              Product Selection Advisory:</b> Providing expert advice on selecting and curating products for an existing gift and decor company, helping to optimize the product line to meet market demand and enhance sales opportunities. <br></br>
-              <b>Sales Platform Setup: </b>Established a new platform for the company to facilitate the sale of goods, including designing and implementing a user-friendly system for listing and managing inventory, and creating an effective sales channel.
-              </p>
-            </div>
-          </div>
-
-
-
-
-        </div>
-      </div>
-
-      <div className="container mx-auto py-16 px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">      
-                {/* Project 5 */}
-
-                <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-            <a href="https://campaign.gudaidia.com/">
-              <Image
-                src="/cam.jpg" // Replace with the correct path if necessary
-                alt="Project 3"
-                width={800} // Add width
-                height={400} // Add height
-                className="w-full h-56 object-cover"
-              />
-            </a>
-          
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold text-purple-600">3. Soccer Coaching Academy Development: </h3>
-              <p className="mt-2 text-gray-600">  ongoing work in establishing a soccer coaching academy focused on training future coaches:
-              <b>Requirements Gathering: </b>Actively identifying and documenting the essential requirements for establishing a soccer coaching academy, including necessary facilities, staffing, curriculum, and training resources. <br />
-              <b>Strategic Planning: </b>Providing strategic insights and innovative ideas to shape the academy’s structure and programs, focusing on effective coach training methodologies and industry best practices.
-              Program Development: Designing and developing comprehensive training modules and certification programs aimed at equipping individuals with the skills and knowledge needed to become successful soccer coaches. <br />
-              <b>Concept Refinement:</b> Continuously refining the academy’s concept to ensure it aligns with market needs and educational standards, including establishing performance metrics and long-term goals <br />
-              </p>
-            </div>
-          </div>
-
-          {/* Project 2 */}
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-            <a href="https://ictresources.biz/">
-              <Image
-                src="/ict.jpg" // Replace with the correct path if necessary
-                alt="Project 2"
-                width={800} // Add width
-                height={400} // Add height
-                className="w-full h-56 object-cover"
-              />
-            </a>
-            
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold text-purple-600">Comprehensive Business Development and Marketing Initiatives:</h3>
-              <p className="mt-2 text-gray-600"><b>Technology Procurement, Business Partner/Reseller List Development:</b> Compiled a targeted list of potential business partners and resellers, identifying key opportunities to expand the company’s network and drive growth. <br></br>
-             <b>Business Partner/Reseller List Development:</b>Led a complete overhaul of the company’s website, enhancing user experience, modernizing design, and optimizing functionality to align with brand objectives and improve engagement. <br></br>
-             <b>Marketing Strategy Development:</b> Designed and produced essential marketing materials, including personal statements, call cards, and other promotional assets, to effectively communicate brand messages and support marketing and sales efforts. <br></br>
-      
-              </p>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-
-
-
-      {/* Call to Action */}
-      <div className="bg-gray-600 py-16 text-center text-white">
-        <h2 className="text-4xl font-extrabold">Ready to Take Your Business to the Next Level?</h2>
-        <p className="mt-4 text-xl">Lets work together to create innovative strategies that will drive your business success.</p>
-        <a
-          href="#contact"
-          className="mt-8 inline-block bg-white text-purple-600 py-2 px-6 rounded-lg text-lg font-semibold hover:bg-purple-100 transition-all"
-        >
-          Get in Touch
-        </a>
-      </div>
-    </div>
+        
+    </section>
+    </>
+    
   );
-};
-
-export default OurWork;
+}

@@ -16,7 +16,7 @@ interface CustomCardInterface {
 const CustomButton = ({ children, onClick, className }: CustomButtonInterface) => (
   <button
     onClick={onClick}
-    className={`px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 ${className}`}
+    className={`px-4 py-2 bg-black text-white rounded-md ${className}`}
   >
     {children}
   </button>
@@ -69,7 +69,7 @@ const DonateComponent = () => {
             {/* Predefined Amounts */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
               {[25, 50, 100, 250].map((amount) => (
-                <CustomButton key={amount} className="text-center text-gray-700 bg-gray-100 hover:bg-gray-200">
+                <CustomButton key={amount} className="text-center bg-black text-white hover:bg-gray-200">
                   ${amount}
                 </CustomButton>
               ))}

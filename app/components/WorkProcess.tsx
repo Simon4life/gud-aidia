@@ -7,8 +7,8 @@ interface StepCardInterface {
     icon: ReactNode
     title: string
     description: string
-    bgColor: string,
-    step: string
+    bgColor?: string,
+    step?: string
 
 }
 
@@ -63,8 +63,8 @@ const HowItWorks = () => {
 
   return (
     <div className="p-8 bg-gray-50">
-      <h2 className="text-2xl text-center font-bold mb-8">How It Works</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <h2 className="text-4xl md:text-5xl text-center mb-10 font-bold">How It Works</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 max-w-6xl mx-auto">
         {steps.map((step, index) => (
           <StepCard
             key={index}

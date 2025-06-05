@@ -8,6 +8,7 @@ import { LiaHandshake } from "react-icons/lia";
 import DonateComponent from '../components/Donate';
 import StepCard from "../components/WorkProcess"
 import Campaign from '../components/Campaign';
+
 const campaignValues = [
   {
     icon: <FaRegLightbulb/>,
@@ -37,7 +38,7 @@ const page = () => {
   return (
     <main>
       <Hero header='The Gʊd Aɪˈdiə Campaign' subheader='Stirring Growth Through Literacy, Accessibility, and Opportunity' links/>
-      <section className="py-16 px-6 max-w-6xl mx-auto">
+      <section className="py-16 px-6 max-w-6xl mx-auto pb-0">
 
         <div className="flex flex-col md:flex-row mb-12 gap-8 items-center">
           <div className="w-auto">
@@ -50,20 +51,21 @@ const page = () => {
             </p>
 
           </div>
-          <div className="w-full ">
-          <div className="relative overflow-hidden rounded-xl">
-            <img
-              src="/Gud3.jpg"
-              alt="group of worker"
-              className="h-full"
+
+          <div className="flex-shrink-0">
+              <Image
+                src="/book-club.jpg"
+                alt="DJ and DD"
+                width={550}
+                height={550}
+                className="shadow-md"
               />
-          </div>
-        </div>
+            </div>
         </div>
         
         
-        <div className="">
-          <h1 className='text-center text-2xl font-bold'>Our MVP</h1>
+        <div className="py-10">
+          <h1 className='text-center my-8 text-4xl font-bold'>Our MVP</h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {
               campaignValues.map((item, index) => {
@@ -76,7 +78,6 @@ const page = () => {
         </div>
         <section className="px-6 py-12 md:py-20 bg-white">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
-            {/* Text Content */}
             <div className="flex-1">
               <h2 className="text-3xl font-bold mb-4 text-left">Our Story</h2>
               <p className="text-gray-700 text-justify leading-relaxed">
@@ -87,18 +88,19 @@ const page = () => {
             {/* Image */}
             <div className="flex-shrink-0">
               <Image
-                src="/child-reader.jpg" // Replace with your actual image path
+                src="/child-reader.jpg"
                 alt="DJ and DD"
-                width={500}
-                height={500}
+                width={550}
+                height={550}
                 className="shadow-md"
               />
             </div>
           </div>
         </section>
         
-        <StepCard/>
+        
       </section>
+      <StepCard/>
       <Campaign/>
       <DonateComponent/>
     </main>

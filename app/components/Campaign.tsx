@@ -2,7 +2,7 @@ const Campaign = () => {
     return (
         <section className="max-w-6xl mx-auto px-6 py-16">
             <div className="text-center mb-12 px-4 max-w-4xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold text-purple-700">
+                <h2 className="text-4xl md:text-5xl font-bold">
                     The Gʊd Aɪˈdiə Campaign
                 </h2>
                 <p className="mt-4 text-gray-700 text-lg leading-relaxed">
