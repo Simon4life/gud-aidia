@@ -7,6 +7,7 @@ import { PiBinocularsLight } from "react-icons/pi";
 import { LiaHandshake } from "react-icons/lia";
 import DonateComponent from '../components/Donate';
 import StepCard from "../components/WorkProcess"
+import Campaign from '../components/Campaign';
 const campaignValues = [
   {
     icon: <FaRegLightbulb/>,
@@ -78,7 +79,7 @@ const page = () => {
             {/* Text Content */}
             <div className="flex-1">
               <h2 className="text-3xl font-bold mb-4 text-left">Our Story</h2>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 text-justify leading-relaxed">
                 The Gud AIDIA Campaign began with two brothers, DJ and DD, who shared a love for stories and a deep curiosity about the world. What started as reading sessions at home soon grew into a vision for inspiring other young minds to explore books, creativity, and personal growth. Through laughter, discovery, and a shared passion, they planted the seed for what would become a powerful movement built on literacy, imagination, and togetherness.
               </p>
             </div>
@@ -88,15 +89,17 @@ const page = () => {
               <Image
                 src="/child-reader.jpg" // Replace with your actual image path
                 alt="DJ and DD"
-                width={400}
-                height={400}
-                className="rounded-2xl shadow-md object-cover"
+                width={500}
+                height={500}
+                className="shadow-md"
               />
             </div>
           </div>
         </section>
+        
         <StepCard/>
       </section>
+      <Campaign/>
       <DonateComponent/>
     </main>
   )

@@ -1,4 +1,8 @@
 import React, { ReactNode } from 'react';
+import { IoBookOutline } from "react-icons/io5";
+import { MdOutlineAttachMoney } from "react-icons/md";
+import { MdDirectionsRun } from "react-icons/md";
+
 interface StepCardInterface {
     icon: ReactNode
     title: string
@@ -8,47 +12,52 @@ interface StepCardInterface {
 
 }
 
-const StepCard = ({ icon, step, title, description, bgColor }: StepCardInterface ) => (
-  <div className="p-6 bg-white shadow-md flex flex-col items-center">
+export const StepCard = ({ icon, step, title, description, bgColor }: StepCardInterface ) => (
+  <div className="p-6 bg-white">
     <div
-      className={`w-12 h-12 flex items-center justify-center rounded-full ${bgColor} mb-4`}
+      className={`w-full flex items-center justify-between rounded-full mb-4`}
     >
-      {icon}
+      <span className="inline-block text-4xl">
+        {icon}
+      </span>
+      
+        <span
+        className={`text-lg inline-block px-3 py-1 mb-4 rounded-full ${bgColor}`}
+      >
+        {step}
+      </span>
     </div>
-    <span
-      className="text-sm font-semibold px-3 py-1 mb-4"
-    >
-      {step}
-    </span>
-    <p className="text-gray-600">{description}</p>
+    
+    <h3 className='mb-4 mt-16 text-xl font-medium'>{title}</h3>
+    <p className="text-gray-600 mb-8">{description}</p>
   </div>
 );
 
 const HowItWorks = () => {
   const steps = [
     {
-      icon: '📖', // Replace with your icon (e.g., SVG or a component)
+      icon: <IoBookOutline/>,
       step: 'Step 01',
       title: 'Inspiring Reading',
       description:
         'Encourage individuals to explore diverse ideas and perspectives through engaging content.',
-      bgColor: 'bg-purple-500',
+      bgColor: 'bg-purple-100',
     },
     {
-      icon: '💰',
+      icon: <MdOutlineAttachMoney/>,
       step: 'Step 02',
       title: 'Strategic Fundraising',
       description:
         'Implement impactful strategies to generate and manage resources effectively.',
-      bgColor: 'bg-yellow-500',
+      bgColor: 'bg-gray-100',
     },
     {
-      icon: '🏃‍♂️', 
+      icon: <MdDirectionsRun/>, 
       step: 'Step 03',
       title: 'Holistic Development',
       description:
         'Foster growth across physical, mental, and emotional dimensions for lasting impact.',
-      bgColor: 'bg-blue-500',
+      bgColor: 'bg-blue-100',
     },
   ];
 
