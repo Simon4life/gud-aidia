@@ -1,22 +1,13 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { CgClose, CgMenuCheese } from 'react-icons/cg'
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
 
   const handleClick = () => setIsActive(!isActive)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   return (
     <nav
