@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 export default function ContactForm() {
   return (
     <>
-      <Hero header="Let's Get in Touch" subheader="We’d love to hear from you and discuss how we can help elevate your digital presence."/>
+      <Hero header="Let's Get in Touch" subheader="We'd love to hear from you and discuss how we can help elevate your digital presence."/>
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="flex flex-col md:flex-row gap-8 p-6">
         {/* Left Section */}

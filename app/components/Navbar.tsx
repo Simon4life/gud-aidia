@@ -42,7 +42,7 @@ const Navbar = () => {
           <li>
               <Link href="/campaign">
                 <span className="bg-white text-black px-4 py-2 rounded-md font-semibold hover:bg-gray-200 transition">
-                  Gʊd Aɪ’diə Campaign
+                  Gʊd AI'diə Campaign
                 </span>
               </Link>
             </li>
@@ -73,7 +73,7 @@ const Navbar = () => {
             <Link href="/contact" onClick={handleClick} className="hover:text-gray-400">Contact Us</Link>
             <Link href="/campaign" onClick={handleClick}>
               <span className="bg-white text-black px-4 py-2 rounded-md font-semibold hover:bg-gray-200 transition">
-                Gʊd Aɪ’diə Campaign
+                Gʊd AI'diə Campaign
               </span>
             </Link>
           </div>

@@ -5,11 +5,11 @@ import React, { ReactNode, useState } from "react";
 interface CustomButtonInterface {
   children: ReactNode;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  className?: string;
+  className?: String;
 }
 interface CustomCardInterface {
   children: ReactNode;
-  className?: string;
+  className?: String;
 }
 
 // Custom Button Component
@@ -113,31 +113,6 @@ const DonateComponent = () => {
             <CustomButton className="w-full">Donate</CustomButton>
           </CustomCard>
         )}
-
-        {/* {activeTab === "Pre-order G.I Merchandise" && (
-          <div className="mt-8 sm:mt-12 flex flex-col items-center">
-            <h3 className="text-lg sm:text-xl font-bold mb-2">G.I Merchandise</h3>
-            <p className="text-sm sm:text-base text-gray-600 mb-4 text-center">
-              Show your support with our exclusive merchandise. Pre-order now and be among the first to receive our limited-edition items.
-            </p>
-            <CustomCard className="w-full max-w-sm">
-              <div className="p-4 flex flex-col items-center">
-                <img
-                  src="/path-to-your-image.jpg"
-                  alt="Merchandise bag"
-                  className="rounded-lg mb-4 w-full"
-                />
-                <CustomButton>Shop Now</CustomButton>
-              </div>
-            </CustomCard>
-          </div>
-        )} */}
-
-        {/* {activeTab !== "Donate an Amount" && activeTab !== "Pre-order G.I Merchandise" && (
-          <div className="text-center text-gray-600">
-            <p>Content for "{activeTab}" is under development.</p>
-          </div>
-        )} */}
       </div>
     </div>
   );

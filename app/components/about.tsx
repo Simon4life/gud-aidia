@@ -14,7 +14,7 @@ const About = () => {
                 
                 <h2 className="text-xl text-left font-semibold p-0 md:text-3xl lg:text-4xl mb-8 leading-relaxed">
                 We are a team of strategic innovators who believe that every idea has a story.
-                At The Gʊd Aɪˈdiə Company, our mission is to bring that story to life through bold strategy, creative thinking, and purpose-driven growth.
+                At The Gʊd AI'diə Company, our mission is to bring that story to life through bold strategy, creative thinking, and purpose-driven growth.
                 </h2>
             </div>
             
@@ -25,11 +25,11 @@ const About = () => {
                         
                     <div className="mb-5">
                         <h3 className='text-xl font-bold mb-3'>Based in New Jersey</h3>
-                        <p className='max-w-[700px] text-gray-500'>Based in New Jersey , The Gʊd Aɪˈdiə Company is an innovation and growth strategy enabler dedicated to helping leading establishments thrive in the digital world. We specialize in innovative strategies, digital positioning and transformation, and holistic growth design.</p>
+                        <p className='max-w-[700px] text-gray-500'>Based in New Jersey , The Gʊd AI'diə Company is an innovation and growth strategy enabler dedicated to helping leading establishments thrive in the digital world. We specialize in innovative strategies, digital positioning and transformation, and holistic growth design.</p>
                     </div>
                     <div className="mb-5">
                         <h3 className='text-xl font-bold mb-3'>Our goal is clear</h3>
-                        <p className='max-w-[700px] text-gray-500'>At The Gʊd Aɪˈdiə Company, we simplify complexity and spark bold growth through strategic, innovative solutions.</p>
+                        <p className='max-w-[700px] text-gray-500'>At The Gʊd AI'diə Company, we simplify complexity and spark bold growth through strategic, innovative solutions.</p>
                     </div>
 
                     <Link href="/about" className="border-b w-28 flex items-center text-black py-2 px-0">Learn More <span><MdArrowOutward/></span></Link>

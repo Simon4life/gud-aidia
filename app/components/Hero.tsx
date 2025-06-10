@@ -4,9 +4,9 @@ import Link from 'next/link'
 import React from 'react';
 
 interface heroInterface {
-  header: string
-  subheader: string
-  links?: boolean
+  header: String
+  subheader: String
+  links?: Boolean
 }
 
 const Hero = ({header, subheader, links}: heroInterface) => {

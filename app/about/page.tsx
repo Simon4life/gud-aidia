@@ -55,7 +55,7 @@ const page = () => {
               <p className="text-purple-700 font-medium">Our Values</p>
             </div>
             <h2 className="text-2xl md:text-3xl font-semibold text-justify leading-relaxed">
-              The Gʊd Aɪˈdiə Campaign was born from two brothers’ love for reading. We're on a mission to cultivate a culture of curiosity, literacy, and community empowerment through books, storytelling, and shared experiences.
+              The Gʊd AI'diə Campaign was born from two brothers' love for reading. We're on a mission to cultivate a culture of curiosity, literacy, and community empowerment through books, storytelling, and shared experiences.
             </h2>
           </div>
 

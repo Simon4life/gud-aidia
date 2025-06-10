@@ -23,7 +23,7 @@ const caseStudies = [
   },
 ]
 
-// ✅ Extracted child component
+// Extracted child component
 function CaseStudyBlock({ item, index, setActiveImage, activeImage }) {
   const [ref, inView] = useInView({ threshold: 0.5 })
 
@@ -57,7 +57,7 @@ export default function CaseStudyScroller() {
       <div className="text-center mb-4">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Our Case Studies</h2>
         <p className="text-gray-600 mt-2 max-w-xl mx-auto text-base">
-          Explore how The Gʊd Aɪˈdiə Company has driven strategy and impact across sectors.
+          Explore how The Gʊd AI'diə Company has driven strategy and impact across sectors.
         </p>
       </div>
 

@@ -37,16 +37,16 @@ const campaignValues = [
 const page = () => {
   return (
     <main>
-      <Hero header='The Gʊd Aɪˈdiə Campaign' subheader='Stirring Growth Through Literacy, Accessibility, and Opportunity' links/>
+      <Hero header="The Gʊd AI'diə Campaign" subheader='Stirring Growth Through Literacy, Accessibility, and Opportunity' links/>
       <section className="py-16 px-6 max-w-6xl mx-auto pb-0">
 
         <div className="flex flex-col md:flex-row mb-12 gap-8 items-center">
           <div className="w-auto">
-            <h1 className='text-2xl md:text-4xl font-bold mb-4'>What is the Aɪˈdiə Campaign?</h1>
-            <h3 className='font-2xl font-semibold mb-2'>/ɡʊˈdaɪˈdɪə/ 'Good Idea!</h3>
+            <h1 className='text-2xl md:text-4xl font-bold mb-4'>What is the AI'diə Campaign?</h1>
+            <h3 className='font-2xl font-semibold mb-2'>/Gud AI'adIə/ 'Good Idea!</h3>
             
             <p className='text-justify text-gray-900 leading-relaxed'>
-              The Gʋd Aɪ'diə Campaign is a dynamic initiative that merges our passion for personal growth with our commitment to literacy. We believe in the holistic development of athletes, fostering not only their physical prowess but also their intellectual curiosity and love for reading.
+              The Gud AI'diə Campaign is a dynamic initiative that merges our passion for personal growth with our commitment to literacy. We believe in the holistic development of athletes, fostering not only their physical prowess but also their intellectual curiosity and love for reading.
 
             </p>
 

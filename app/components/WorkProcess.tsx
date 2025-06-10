@@ -5,10 +5,10 @@ import { MdDirectionsRun } from "react-icons/md";
 
 interface StepCardInterface {
     icon: ReactNode
-    title: string
-    description: string
-    bgColor?: string,
-    step?: string
+    title: String
+    description: String
+    bgColor?: String,
+    step?: String
 
 }
 

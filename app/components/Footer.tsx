@@ -31,14 +31,14 @@ const Footer = () => {
               <li><Link href="#" className="hover:text-yellow-300">Register</Link></li>
               <li><Link href="#" className="hover:text-yellow-300">Donate</Link></li>
               <li><Link href="/contact" className="hover:text-yellow-300">Contact</Link></li>
-              <li><Link href="#" className="hover:text-yellow-300">The Gʊd Aɪ’diə Campaign</Link></li>
+              <li><Link href="#" className="hover:text-yellow-300">The Gʊd AI'diə Campaign</Link></li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Section */}
         <div className="mt-8 text-sm text-center text-white/60">
-          &copy; {new Date().getFullYear()} The Gʊd Aɪ’diə Company · All rights reserved
+          &copy; {new Date().getFullYear()} The Gʊd AI'diə Company · All rights reserved
         </div>
       </div>
     </footer>
