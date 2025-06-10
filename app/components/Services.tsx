@@ -1,31 +1,39 @@
 "use client"
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import { MdArrowOutward } from 'react-icons/md'
 
 const items = [
   {
     id: '001',
-    title: 'SEO Marketing',
-    description: 'Leverages platforms like Facebook, Instagram, LinkedIn to engage and attract.',
+    title: 'Brand Renaissance',
+    description: 'Revitalizing and evolving brand identities to ensure relevance and impactful engagement with target audiences.',
     image: '/Gud1.jpg',
-    tags: ['Services', 'E-Commerce', 'Corporate Website', 'HR Platform'],
+    tags: ['Branding', 'Identity', 'Marketing', 'Strategy'],
   },
   {
     id: '002',
-    title: 'Social Media',
-    description: 'Leverages platforms like Facebook, Instagram, LinkedIn to engage and attract.',
-    image: 'Gud2.jpg',
-    tags: ['Services', 'E-Commerce', 'Corporate Website', 'HR Platform'],
+    title: 'Business Strategy Alignment',
+    description: 'Providing expert advice and insights to align business operations with market trends and future goals, driving strategic growth.',
+    image: '/business-alignment.jpg',
+    tags: ['Strategy', 'Business Development', 'Growth', 'Consulting'],
   },
   {
     id: '003',
-    title: 'Content Marketing',
-    description: 'Leverages platforms like Facebook, Instagram, LinkedIn to engage and attract.',
-    image: 'Gud3.jpg',
-    tags: ['Services', 'E-Commerce', 'Corporate Website', 'HR Platform'],
-  }
-]
+    title: 'Digital Positioning and Transformation',
+    description: 'Optimizing and leveraging digital strategies to achieve a specific market position or advantage (market differentiation). Adoption and integration of cutting-edge digital technologies and strategies to improve operations and customer interactions.',
+    image: '/positioninig',
+    tags: ['Digital Strategy', 'Digital Transformation', 'Technology', 'Marketing', 'Operations'],
+  },
+  {
+    id: '004',
+    title: 'Innovative Solutions Management',
+    description: 'Guiding businesses through the complete innovation lifecycle, from conceptualization to implementation, to maintain a competitive edge.',
+    image: '/direction.jpg',
+    tags: ['Innovation', 'Project Management', 'Solutions', 'Strategy'],
+  },
+];
 
 export default function ServiceDropdown() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
@@ -55,14 +63,20 @@ export default function ServiceDropdown() {
                           <span className={`text-sm px-3 py-1 rounded-full ${index === 0 ? 'bg-blue-100' : index === 1 ? 'bg-yellow-100' : 'bg-green-100'}`}>
                             {item.id}
                           </span>
-                          <h3 className="flex-1 ml-6 md:ml-32 text-xl font-medium text-gray-800">{item.title}</h3>
+                          <h3 className="flex-1 ml-6 md:ml-48 text-xl font-medium text-gray-800">{item.title}</h3>
                           <span className="text-2xl">{isOpen ? '−' : '+'}</span>
                   </div>
                   {isOpen && (
-                    <div className="mt-4 flex flex-col md:ml-4 md:flex-row md:items-start gap-6 px-2">
+                    <div className="mt-4 flex flex-col md:ml-16 md:flex-row md:items-start gap-8 px-2">
                       {/* Image */}
                       {item.image && (
-                        <img src={item.image} alt={item.title} className="w-32 h-32 object-cover rounded" />
+                        <Image
+                        src={item.image}
+                        alt={item.title}
+                        width={128}
+                        height={128}
+                        className="object-cover rounded"
+                      />
                       )}
 
                       {/* Text & Link */}

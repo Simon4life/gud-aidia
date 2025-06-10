@@ -20,8 +20,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-    scrolled ? 'bg-black shadow-lg' : 'bg-transparent'
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-black
       }`}
     >
       <div className="flex justify-center items-center py-4">
@@ -45,7 +44,11 @@ const Navbar = () => {
             <li>
               <Link href="/contact" className="hover:text-gray-300 transition">Contact Us</Link>
             </li>
-            <li>
+            
+          </ul>
+
+          <ul className='hidden md:block'>
+          <li>
               <Link href="/campaign">
                 <span className="bg-white text-black px-4 py-2 rounded-md font-semibold hover:bg-gray-200 transition">
                   Gʊd Aɪ’diə Campaign
@@ -56,14 +59,14 @@ const Navbar = () => {
 
           {/* Mobile Icon */}
           <button className="md:hidden text-2xl" onClick={handleClick}>
-            {isActive ? <CgClose /> : <CgMenuCheese />}
+           <CgMenuCheese />
           </button>
         </div>
       </div>
 
       {/* Mobile Menu Overlay */}
       {isActive && (
-        <div className="md:hidden relative top-0 left-0 w-full h-screen bg-black bg-opacity-95 text-white z-40">
+        <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-black bg-opacity-95 text-white z-40">
           <div className="flex justify-between items-center px-6 py-4 border-b border-white/10">
             <Link href="/" onClick={handleClick}>
               <Image src="/logo.png" alt="logo" width={87} height={57} />

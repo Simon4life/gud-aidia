@@ -25,7 +25,7 @@ const About = () => {
                         
                     <div className="mb-5">
                         <h3 className='text-xl font-bold mb-3'>Based in New Jersey</h3>
-                        <p className='max-w-[700px] text-gray-500'>Based in London, our digital agency is dedicated to helping brands thrive in the digital world. We specialize in web design, digital marketing, SEO, content creation.</p>
+                        <p className='max-w-[700px] text-gray-500'>Based in New Jersey , The Gʊd Aɪˈdiə Company is an innovation and growth strategy enabler dedicated to helping leading establishments thrive in the digital world. We specialize in innovative strategies, digital positioning and transformation, and holistic growth design.</p>
                     </div>
                     <div className="mb-5">
                         <h3 className='text-xl font-bold mb-3'>Our goal is clear</h3>
@@ -50,7 +50,7 @@ const About = () => {
                 <div className="w-full max-w-3xl mx-auto ">
                         <div className="relative overflow-hidden rounded-xl">
                             <img
-                            src="/Gud3.jpg"
+                            src="/Gud5.jpg"
                             alt="group of worker"
                             className="h-full"
                             />
