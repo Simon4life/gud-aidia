@@ -23,59 +23,69 @@ const caseStudies = [
   },
 ]
 
+// ✅ Extracted child component
+function CaseStudyBlock({ item, index, setActiveImage, activeImage }) {
+  const [ref, inView] = useInView({ threshold: 0.5 })
+
+  useEffect(() => {
+    if (inView) {
+      setActiveImage(index)
+    }
+  }, [inView, index, setActiveImage])
+
+  return (
+    <div
+      ref={ref}
+      className={`pl-6 border-l-4 transition-all duration-300 ${
+        activeImage === index ? 'border-black' : 'border-gray-300'
+      }`}
+    >
+      <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
+      <p className="text-gray-600 text-base max-w-md mb-4">{item.description}</p>
+      <a href="#" className="text-sm font-medium text-black underline inline-flex items-center gap-1">
+        Learn more <span>↗</span>
+      </a>
+    </div>
+  )
+}
+
 export default function CaseStudyScroller() {
   const [activeImage, setActiveImage] = useState(0)
 
   return (
-    <section className="">
+    <section>
       <div className="text-center mb-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-          Our Case Studies
-        </h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Our Case Studies</h2>
         <p className="text-gray-600 mt-2 max-w-xl mx-auto text-base">
           Explore how The Gʊd Aɪˈdiə Company has driven strategy and impact across sectors.
         </p>
       </div>
+
       <div className="flex flex-col md:flex-row w-full max-w-6xl mx-auto py-16 px-4 gap-8">
-      {/* Left Section (Text blocks stacked) */}
-      <div className="flex-1 space-y-24">
-        {caseStudies.map((item, i) => {
-          const [ref, inView] = useInView({ threshold: 0.5 })
+        {/* Left Section */}
+        <div className="flex-1 space-y-24">
+          {caseStudies.map((item, i) => (
+            <CaseStudyBlock
+              key={item.id}
+              item={item}
+              index={i}
+              activeImage={activeImage}
+              setActiveImage={setActiveImage}
+            />
+          ))}
+        </div>
 
-          useEffect(() => {
-            if (inView) setActiveImage(i)
-          }, [inView, i])
-
-          return (
-            <div
-              key={i}
-              ref={ref}
-              className={`pl-6 border-l-4 transition-all duration-300 ${
-                activeImage === i ? 'border-black' : 'border-gray-300'
-              }`}
-            >
-              <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-600 text-base max-w-md mb-4">{item.description}</p>
-              <a href="#" className="text-sm font-medium text-black underline inline-flex items-center gap-1">
-                Learn more <span>↗</span>
-              </a>
-            </div>
-          )
-        })}
-      </div>
-
-      {/* Right Section (Image is sticky and changes) */}
-      <div className="hidden md:block w-1/2">
-        <div className="sticky top-32 h-[400px] bg-gray-100 rounded-lg overflow-hidden shadow-lg">
-          <img
-            src={caseStudies[activeImage].image}
-            alt={caseStudies[activeImage].title}
-            className="w-full h-full object-cover transition duration-500"
-          />
+        {/* Right Section (Image changes with active index) */}
+        <div className="hidden md:block w-1/2">
+          <div className="sticky top-32 h-[400px] bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+            <img
+              src={caseStudies[activeImage].image}
+              alt={caseStudies[activeImage].title}
+              className="w-full h-full object-cover transition duration-500"
+            />
+          </div>
         </div>
       </div>
-    </div>
     </section>
-    
   )
 }

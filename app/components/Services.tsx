@@ -44,10 +44,10 @@ export default function ServiceDropdown() {
 
   return (
     <section className="bg-white max-w-6xl mx-auto py-16 px-4">
-      <div className="w-full mx-auto divide-y divide-gray-200">
+      <div className="w-full mx-auto divide-gray-200">
         <div className="flex flex-col md:flex-row p-0 gap-6 mb-12 md:justify-between items-center">
           <h1 className='text-5xl md:text-5xl max-w-[600px]'>Marketing Strategy solutions for you</h1>
-          <div className="max-w-[400px]">
+          <div className="">
             <p className='m-0 p-0 text-xl mb-6'>
               Several key factors, including market trends, the agency's ability to  adapt
             </p>

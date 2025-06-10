@@ -19,7 +19,7 @@ const Hero = ({header, subheader, links}: heroInterface) => {
 
           {
             links && (<div className="flex gap-8 justify-center items-center font-semibold">
-              <Link href="/services" className="px-5 py-6  rounded flex items-center justify-center text-black bg-purple-200 hover:bg-yellow-100">Get Started <span className="ml-4"><MdArrowOutward/></span></Link>
+              <Link href="/services" className="px-5 py-6  rounded flex items-center justify-center text-black bg-purple-300 hover:bg-yellow-100">Get Started <span className="ml-4"><MdArrowOutward/></span></Link>
               <Link href="/campaign" className="border-b inline-block border-white text-white py-2 hover:text-yellow-600 transition">Join the Campaign</Link>
             </div>)
           }
